@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  max-width: 112rem;
+  padding: 2.4rem;
+  margin: 0 auto;
+}
+
+.weater-main {
+  margin: 4rem auto;
+  max-width: 60rem;
+  width: 90vw;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.user-input {
+  position: relative;
+  max-width: 30rem;
+  width: 80%;
+}
+
+.user-input input {
+  width: 100%;
+  background-color: black;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  padding-left: 3rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  color: white;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.search-icon {
+  color: white;
+  translate: .8rem 2.9rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.user-input ul {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  list-style: none;
+  background-color: white;
+  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: rem;
+  padding: 1rem 0;
+
+  & li {
+    padding: 1rem 0;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+
+    &:hover {
+      background-color: rgb(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+  }
+
+}
+
+.main-weather--data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.city-name {
+  font-size: 4rem;
+  font-weight: 500;
+text-align: center;
+}
+
+.city-date {
+  font-size: 1.8rem;
+}
+
+.city-weather--status {
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.4);
+}
+
+.weather-icon {
+  background-color: #7b7b7b;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.5);
+}
+
+.city-temp {
+  font-size: 2.3rem;
+}
+
+.city-minMax--temp {
+  display: flex;
+  gap: .7rem;
+  font-size: 1.8rem
+}
+
+.meta-info--card {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.single-card {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  border-radius: .8rem;
+
+}
+
+.info-card--icon {
+  font-size: 2.5rem;
+}
+
+.overall-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Optional pulse animation for a subtle effect */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
